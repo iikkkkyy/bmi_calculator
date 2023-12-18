@@ -63,6 +63,7 @@ class _MainScreenState extends State<MainScreen> {
                   if (_formKey.currentState?.validate() ?? false) {
                     return;
                   }
+
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -73,7 +74,7 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                   );
                 },
-                child: Text('결과'),
+                child: const Text('결과'),
               )
             ],
           ),
