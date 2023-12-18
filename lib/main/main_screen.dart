@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../result/result_screen.dart';
+
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
@@ -59,8 +61,17 @@ class _MainScreenState extends State<MainScreen> {
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState?.validate() ?? false) {
-
+                    return;
                   }
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ResultScreen(
+                        height: 180,
+                        weight: 77.5,
+                      ),
+                    ),
+                  );
                 },
                 child: Text('결과'),
               )
